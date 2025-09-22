@@ -12,7 +12,7 @@ public class HelloController {
     @GetMapping("/hello")
     public Map<String, Object> sayHello() {
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "Hellos Watahel!");
+        response.put("message", "Hellos Watahels!");
         response.put("status", "success");
         response.put("code", 200);
         return response;
