@@ -40,9 +40,9 @@ spring:
   # Database Connection (MySQL via env)
   # ===============================
   datasource:
-    url: $DB_URL
-    username: $DB_USER
-    password: $DB_PASS
+    url: jdbc:mysql://srv1365.hstgr.io:3306/u816573993_syhrl
+    username: u816573993_root
+    password: 8t{/Rk[/91_NH#Lz{qKT
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   # ===============================
