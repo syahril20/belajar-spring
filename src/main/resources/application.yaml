@@ -1,0 +1,75 @@
+# ===============================
+# Application
+# ===============================
+spring:
+  application:
+    name: belajar
+
+  # ===============================
+  # Devtools (hanya aktif di dev)
+  # ===============================
+  devtools:
+    add-properties: true
+    restart:
+      enabled: true
+      exclude: static/**,public/**,resources/**,META-INF/**
+      poll-interval: 1000
+      quiet-period: 400
+    livereload:
+      enabled: true
+
+  # ===============================
+  # MVC
+  # ===============================
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # ===============================
+  # Jackson (JSON)
+  # ===============================
+  jackson:
+    serialization:
+      indent_output: true
+    deserialization:
+      fail-on-unknown-properties: false
+    property-naming-strategy: SNAKE_CASE
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  # ===============================
+  # Database Connection (MySQL via env)
+  # ===============================
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # ===============================
+  # JPA/Hibernate
+  # ===============================
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+# ===============================
+# Logging
+# ===============================
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    web: DEBUG
+
+# ===============================
+# Server
+# ===============================
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  error:
+    include-message: always
+    include-binding-errors: always
