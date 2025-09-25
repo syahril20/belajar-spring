@@ -1,5 +1,7 @@
 package testing.belajar.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.lang.NonNull;
@@ -13,4 +15,5 @@ public interface UserVisitRepository extends JpaRepository<UserVisitModel, Long>
     long countByUserId(@NonNull String userId);
 
     UserVisitModel findFirstByUserId(String id);
+    Page<UserVisitModel> findByNameContainingIgnoreCaseOrUserIdContainingIgnoreCase(String searchQuery, String searchQuery1, Pageable pageable);
 }

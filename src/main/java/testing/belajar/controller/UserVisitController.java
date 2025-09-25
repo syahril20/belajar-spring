@@ -31,7 +31,8 @@ public class UserVisitController {
 
     @PostMapping
     public ApiResponse createVisit(@RequestBody CreateVisitRequest request) {
-        return new ApiResponse(200, SUCCESS, userVisitService.saveVisit(request));
+        userVisitService.createVisit(request);
+        return new ApiResponse(200, SUCCESS);
     }
 
 }

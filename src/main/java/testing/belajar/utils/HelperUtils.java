@@ -8,15 +8,6 @@ public class HelperUtils {
     }
 
     /**
-     * Mengecek apakah string null atau kosong
-     * @param str String yang dicek
-     * @return true jika null atau kosong, false jika ada isinya
-     */
-    public static boolean isNullOrEmpty(String str) {
-        return str == null || str.isEmpty();
-    }
-
-    /**
      * Mengecek apakah string null atau blank (hanya spasi)
      * @param str String yang dicek
      * @return true jika null atau blank, false jika ada isinya

@@ -20,4 +20,8 @@ public class ApiResponse {
         this.message = message;
     }
 
+    public ApiResponse(int code, String success) {
+        this.code = code;
+        this.status = success;
+    }
 }
